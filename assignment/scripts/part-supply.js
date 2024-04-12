@@ -63,27 +63,25 @@ console.log('7. Showing supplyChanges with "for of" loop');
 
 console.log(supplyChanges);
 
-for (let supplyChange of supplyChanges){
- if (supplyChange > 0){
-  console.log("added " + supplyChange);
- } else if (supplyChange === 0){
-  console.log("no change")
- } else {
-  console.log("removed " + (-supplyChange));
- }
+for (let supplyChange of supplyChanges) {
+  if (supplyChange > 0) {
+    console.log("added " + supplyChange);
+  } else if (supplyChange === 0) {
+    console.log("no change");
+  } else {
+    console.log("removed " + -supplyChange);
+  }
 }
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 
-
 let partsAvailable = 0;
 
 for (let change of supplyChanges) {
-  partsAvailable += change; 
+  partsAvailable += change;
 }
 
 console.log("8. Total supplies available is:", partsAvailable);
-
 
 // 9. We have a large stash of parts in our warehouse that we
 //    need to box up and get ready for shipment.
@@ -100,12 +98,12 @@ let remainingParts = totalParts;
 
 while (remainingParts > 0) {
   if (remainingParts >= partsPerBox) {
-    boxesFilled++; 
-    remainingParts -= partsPerBox; 
+    boxesFilled++;
+    remainingParts -= partsPerBox;
   } else {
     break;
   }
-};
+}
 
 console.log("boxes filled:", boxesFilled);
 console.log("parts remaining:", remainingParts);
